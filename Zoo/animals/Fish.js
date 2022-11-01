@@ -1,4 +1,4 @@
-
+let Animal = require('./Animal.js')
 class Fish extends Animal{
     constructor(name, species, food_type,daily_qunitly,lowest_depth){
        super(name,species,food_type,daily_qunitly)
@@ -7,7 +7,9 @@ class Fish extends Animal{
     }
       
 }
-   
+
+
+module.exports = Fish;
    
    
    
