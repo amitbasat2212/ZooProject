@@ -9,6 +9,7 @@ class Food {
     getAmountOfFood(){
         return this.grams;
     }
+    
     setAmountOfFood(amount){
         this.grams=amount;
     }

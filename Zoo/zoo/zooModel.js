@@ -1,6 +1,8 @@
 let Food = require('../Food/Food');
 const Zoo = require('./zoo');
 class ZooModel{
+
+    defultRefiel =200;
     check_if_empty(typeFoodAnimal,foodSupply){
         if(foodSupply[typeFoodAnimal]===undefined){                             
            foodSupply[typeFoodAnimal]=new Food(0);
@@ -9,8 +11,7 @@ class ZooModel{
        
    }
    
-   feed_animals(animalesZoo,foodSupply){       
-       
+   feed_animals(animalesZoo,foodSupply){  
         for(let i=0;i<animalesZoo.length;i++){
             this.feed_animal(animalesZoo,foodSupply,i)
         }
@@ -36,7 +37,7 @@ class ZooModel{
 
 
     refial_supply(type,foodSupply){        
-        const amount = foodSupply[type].getAmountOfFood()+200;
+        const amount = foodSupply[type].getAmountOfFood()+this.defultRefiel;
         foodSupply[type].setAmountOfFood(amount);         
 
     }
