@@ -2,13 +2,18 @@ class Animal {
  constructor(name, species, foodType,dailyQunitly){
     this.name = name;
     this.species = species;
-    this.food_type = foodType; 
-    this.daily_qunitly = dailyQunitly;  
+    this.foodType = foodType; 
+    this.dailyQunitly = dailyQunitly;  
    
  }
-    set_daily_qubity(foodDaily){
-        this.dailyQunitly=foodDaily;
+    getDailyQubity(){
+        return this.dailyQunitly
     }
+    getFoodType(){
+        return this.foodType
+    }
+
+
 }
 
 module.exports = Animal;
